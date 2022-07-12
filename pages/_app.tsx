@@ -7,7 +7,7 @@ import '../styles/output.css'
 function MyApp({ Component, pageProps }: AppProps) {
 
   return (
-    <div className='relative overflow-hidden w-screen h-screen' >
+    <div className=' overflow-hidden w-screen h-screen' >
       <NavBar />
       <Component {...pageProps} />
     </div>

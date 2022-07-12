@@ -9,7 +9,7 @@ const icons = 'cursor-pointer'
 
 export const NavBar = () => {
   return (
-    <nav className='sticky z-50 bg-black w-full h-20 px-10 text-white flex justify-between items-center'>
+    <nav className='fixed z-50  bg-black w-full h-20 px-10 text-white flex justify-between items-center'>
            
         <h1 className='text-4xl cursor-pointer font-bold'>LOGO.</h1>
      

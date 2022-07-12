@@ -13,6 +13,44 @@ html,body {
 }
 
 
+
+/* Marquee animation */
+
+.scrolling {
+  animation: scrolling 25s linear infinite;
+  user-select: none;
+}
+
+@keyframes scrolling {
+  0% { transform: translateX(0);}
+  100% { transform: translateX(-100%);}
+}
+
+
+/* Flicker animation */
+
+.flicker {
+  animation: flicker 2s infinite forwards ;
+  animation-delay: 1s;
+}
+
+@keyframes flicker {
+  0% {
+    filter: blur(5px) brightness(1);
+  }
+  50% {
+    filter: blur(5px) brightness(.7);
+  }
+  80% {
+    filter: blur(5px) brightness(1);
+  }
+  100% {
+    filter: blur(5px) brightness(.7);
+  }
+}
+
+
+
 /*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 html.has-scroll-smooth {
     overflow: hidden; }
@@ -27,7 +65,9 @@ html.has-scroll-smooth {
     overflow: hidden; }
   
   .has-scroll-smooth [data-scroll-container] {
-    min-height: 100vh; }
+    min-height: 100vh;
+    transform: perspective(1px);
+  }
   
   [data-scroll-direction="horizontal"] [data-scroll-container] {
     height: 100vh;

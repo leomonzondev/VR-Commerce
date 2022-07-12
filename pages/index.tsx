@@ -4,6 +4,7 @@ import { Hero } from '../src/components/Hero'
 import { Marquee } from '../src/components/Marquee'
 import { NavBar } from '../src/components/NavBar'
 import { ShopSection } from '../src/components/ShopSection';
+import { Video } from '../src/components/Video'
 
 const locomotiveScroll =
   typeof window !== `undefined` ? require("locomotive-scroll").default : null;
@@ -21,7 +22,7 @@ const Home: NextPage = () => {
       smooth: true,
       reloadOnContextChange: true,
       multiplier: 0.75,
-      inertia: 0.5,
+      inertia: 0.8,
     });
 
     // update locomotive scroll
@@ -31,17 +32,24 @@ const Home: NextPage = () => {
       const isLoaded = image!.complete && image!.naturalHeight !== 0;
       lscroll.update();
     });
+
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    return () => lscroll.destroy();
   },[])
 
 
   return (
     <>
-    <div data-scroll-container ref={refScroll}>
-      <Hero />
-      <Marquee />
-      <ShopSection />
-
-    </div>
+      <div data-scroll-container ref={refScroll} className="mt-20">
+ 
+        <Hero />
+        <Marquee />
+        <ShopSection />
+        <Video />
+      </div>
     </>
   )
 }
