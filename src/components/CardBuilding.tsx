@@ -1,7 +1,17 @@
 import Image from 'next/image'
 import React from 'react'
 
-export const CardBuilding = ({content}) => {
+type Props = {
+
+  content: {
+    title: string;
+    text: string;
+    img: any;
+  }
+
+}
+
+export const CardBuilding = ({content}:Props) => {
 
   const { title, text, img } = content
 

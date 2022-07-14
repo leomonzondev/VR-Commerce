@@ -20,7 +20,7 @@ export const Building = () => {
         <div className='flex flex-wrap justify-center gap-72'>
             <div className='flex flex-col gap-20'>
                 {
-                    content.map(card => <CardBuilding content={card} />)
+                    content.map((card,idx) => <CardBuilding key={`card-${ idx }`} content={card} />)
                 }
             </div>
             <div className='mt-20'>

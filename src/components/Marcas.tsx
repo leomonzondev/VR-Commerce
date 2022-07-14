@@ -17,7 +17,7 @@ export const Marcas = () => {
     <div className='w-full h-96 flex items-center justify-center'>
         <div className='flex text-8xl font-bold gap-10 px-20  '>
             {
-              marcas.map(marca => <Image src={marca} className="invert opacity-30"/>)
+              marcas.map(( marca, idx ) => <Image key={`marca-${ idx }`} src={marca} className="invert opacity-30"/>)
             }
         </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
     </div>

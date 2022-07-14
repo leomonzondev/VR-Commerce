@@ -33,7 +33,7 @@ export const ShopSection = () => {
       </div>
 
     <div>
-      <h2 className='font-bold text-6xl text-white text-end pb-20'>WHAT'S INCLUDED</h2>
+      <h2 className='font-bold text-6xl text-white text-end pb-20'>WHATS INCLUDED</h2>
       <div className='h-2 w-full bg-pink' />
     <div className='flex flex-wrap px-20 justify-center gap-8 pb-20'>
       <CardProduct />
