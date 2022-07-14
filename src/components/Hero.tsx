@@ -17,9 +17,9 @@ export const Hero = () => {
             </div>
         </article>
 
-        <article className='flex flex-col  bg-black text-end justify-center items-center'>
-            <h1 className='text-[12rem] leading-[10rem] font-black text-white text-end '>The <br/> <span className='text-[#c668f3]'>Metaverse</span> <br/> is here</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <article className='flex flex-col  bg-black text-end justify-center items-center w-[70rem] pr-20'>
+            <h1 className='text-[11rem] leading-[10rem] font-black text-white text-end '>The <br/> <span className='text-[#bf1cce]'>Metaverse</span> <br/> is here</h1>
+            <p className='text-white text-end'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </article>
   
     </main>

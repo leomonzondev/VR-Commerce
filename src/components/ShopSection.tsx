@@ -4,10 +4,13 @@ import React from 'react'
 import headset from '../assets/images/vrheadsettransparency.png'
 import gif from '../assets/images/GuBZ.gif'
 import flare from '../assets/images/flare.png'
+import { CardProduct } from './CardProduct'
+import { CardAccesorie } from './CardAccesorie'
 
 export const ShopSection = () => {
+
   return (
-    <div className='w-full  bg-black'>
+    <div className='w-full  bg-black pb-20 px-20'>
       
       <div className='relative flex justify-center h-screen'>
           <h1 className='text-[18rem] text-white font-black -top-16  absolute'>METAQUEST</h1>
@@ -23,15 +26,33 @@ export const ShopSection = () => {
             <Image src={gif} className=" " />
           </div>
         </div>
-        <div className='absolute right-0 bottom-0'>
-          <p className='text-white'>From $299</p>
-          <button className='px-10 bg-pink-400 rounded-lg'>Buy Now</button>
+        <div className='absolute right-0 bottom-0 flex flex-col items-center gap-6'>
+          <p className='text-white text-6xl font-medium'>From $299 USD</p>
+          <button className='px-12 text-white bg-pink-400 rounded-full text-2xl font-semibold py-4'>Buy Now</button>
         </div>
       </div>
 
     <div>
-      <h2 className='font-bold text-9xl text-white text-end'>What's included</h2>
+      <h2 className='font-bold text-6xl text-white text-end pb-20'>WHAT'S INCLUDED</h2>
       <div className='h-2 w-full bg-pink' />
+    <div className='flex flex-wrap px-20 justify-center gap-8 pb-20'>
+      <CardProduct />
+      <CardProduct />
+      <CardProduct />
+      <CardProduct />
+    </div>
+    </div>
+
+
+    <div >
+      <h2 className='font-bold text-6xl text-white text-start'>ACCESORIES</h2>
+      <div className='h-2 w-full bg-pink' />
+      <div className='flex flex-wrap gap-4 justify-center pt-20'>
+        <CardAccesorie />
+        <CardAccesorie />
+        <CardAccesorie />
+        <CardAccesorie />
+      </div>
     </div>
 
     </div>

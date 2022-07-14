@@ -1,6 +1,9 @@
 import type { NextPage } from 'next'
 import React, { useEffect } from 'react'
+import { Building } from '../src/components/Building'
+import { Footer } from '../src/components/Footer'
 import { Hero } from '../src/components/Hero'
+import { Marcas } from '../src/components/Marcas'
 import { Marquee } from '../src/components/Marquee'
 import { NavBar } from '../src/components/NavBar'
 import { ShopSection } from '../src/components/ShopSection';
@@ -49,6 +52,9 @@ const Home: NextPage = () => {
         <Marquee />
         <ShopSection />
         <Video />
+        <Building />
+        <Marcas />
+        <Footer />
       </div>
     </>
   )
