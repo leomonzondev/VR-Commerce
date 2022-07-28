@@ -6,7 +6,7 @@ export const Marquee = () => {
 
 
   return (
-    <div className='py-10 w-full'>
+    <div className='py-10 w-full bg-black'>
         <p className='scrolling text-white font-bold space-x-2 text-5xl whitespace-nowrap tracking-[.50rem]'>{words}</p>
     </div>
   )

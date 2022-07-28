@@ -11,7 +11,7 @@ export const NavBar = () => {
   return (
     <nav className='fixed z-50  bg-black w-full h-20 px-10 text-white flex justify-between items-center'>
            
-        <h1 className='text-4xl cursor-pointer font-bold'>LOGO.</h1>
+        <h1 className='text-4xl cursor-pointer font-bold'>ZENIT.</h1>
      
         <div className='flex justify-around w-48'>
             <FiShoppingBag className={icons} size={28} />

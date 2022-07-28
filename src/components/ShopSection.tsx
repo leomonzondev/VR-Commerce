@@ -13,7 +13,7 @@ export const ShopSection = () => {
     <div className='w-full  bg-black pb-20 px-20'>
       
       <div className='relative flex justify-center h-screen'>
-          <h1 className='text-[18rem] text-white font-black -top-16  absolute'>METAQUEST</h1>
+          <h1 className='text-[18rem] text-white font-black -top-16  absolute'>OMNIQUEST</h1>
         <div className='w-[48rem]  relative -scale-x-[1]'>
           
           <div className='absolute z-20'>
@@ -27,8 +27,8 @@ export const ShopSection = () => {
           </div>
         </div>
         <div className='absolute right-0 bottom-0 flex flex-col items-center gap-6'>
-          <p className='text-white text-6xl font-medium'>From $299 USD</p>
-          <button className='px-12 text-white bg-pink-400 rounded-full text-2xl font-semibold py-4'>Buy Now</button>
+          <p className='text-white text-6xl font-bold'>From $299 USD</p>
+          <button className='px-12  text-white bg-gradient-to-r  from-[#ca6eff] to-[#6e8bef] hover:from-[#6e8bef] hover:to-[#ca6eff] transition-all duration-300 ease rounded-full text-2xl font-semibold py-4'>Buy Now</button>
         </div>
       </div>
 

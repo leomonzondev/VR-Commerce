@@ -47,7 +47,6 @@ const Home: NextPage = () => {
   return (
     <>
       <div data-scroll-container ref={refScroll} className="mt-20">
- 
         <Hero />
         <Marquee />
         <ShopSection />
