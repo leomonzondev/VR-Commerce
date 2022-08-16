@@ -1,19 +1,20 @@
-import type { NextPage } from 'next'
-import React, { useEffect } from 'react'
-import { Building } from '../src/components/Building'
-import { Footer } from '../src/components/Footer'
-import { Hero } from '../src/components/Hero'
-import { Marcas } from '../src/components/Marcas'
-import { Marquee } from '../src/components/Marquee'
-import { NavBar } from '../src/components/NavBar'
-import { ShopSection } from '../src/components/ShopSection';
-import { Video } from '../src/components/Video'
+import type { NextPage } from "next";
+import React, { useEffect } from "react";
+import { Building } from "../src/components/Building";
+import { Footer } from "../src/components/Footer";
+import { Hero } from "../src/components/Hero";
+import { Marcas } from "../src/components/Marcas";
+import { Marquee } from "../src/components/Marquee";
+import { NavBar } from "../src/components/NavBar";
+import { ShopSection } from "../src/components/ShopSection";
+import { Video } from "../src/components/Video";
+import { VideoJs } from "../src/components/VideoJs";
+import videojs from "video.js";
 
 const locomotiveScroll =
   typeof window !== `undefined` ? require("locomotive-scroll").default : null;
 
 const Home: NextPage = () => {
-
   const refScroll = React.useRef(null);
   let lscroll: any;
 
@@ -41,22 +42,22 @@ const Home: NextPage = () => {
     }
 
     return () => lscroll.destroy();
-  },[])
-
+  }, []);
 
   return (
     <>
-      <div data-scroll-container ref={refScroll} className="mt-20">
+      <div data-scroll-container ref={refScroll} className="">
         <Hero />
         <Marquee />
         <ShopSection />
-        <Video />
+        <VideoJs />
+        {/* <Video /> */}
         <Building />
         <Marcas />
         <Footer />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
