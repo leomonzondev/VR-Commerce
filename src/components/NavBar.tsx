@@ -8,7 +8,11 @@ import { ShoppingCart } from "./summary/ShoppingCart";
 
 const icons = "cursor-pointer";
 
-export const NavBar = ({ handleShowCart }) => {
+type navProps = {
+  handleShowCart: () => void;
+};
+
+export const NavBar = ({ handleShowCart }: navProps) => {
   return (
     <nav className="fixed z-50 backdrop-blur-xl  bg-black/75 w-full h-20 px-20 text-white flex justify-between items-center">
       <h1 className="text-4xl cursor-pointer font-bold">ZENIT.</h1>

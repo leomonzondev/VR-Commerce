@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
 import headset from "../assets/images/vrheadsettransparency.png";
 import gif from "../assets/images/GuBZ.gif";
@@ -7,8 +7,17 @@ import flare from "../assets/images/flare.png";
 import { CardProduct } from "./CardProduct";
 import { CardAccesorie } from "./CardAccesorie";
 import { accesories, principal } from "../helpers/data";
+import { useAppSelector, useAppDispatch } from "../context/hooks";
+import { receivedProducts } from "../context/productsSlice";
+import { addToCart } from "../context/cartSlice";
 
 export const ShopSection = () => {
+  const products = useAppSelector((state) => state.products.products);
+
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {}, []);
+
   return (
     <div className="w-full  bg-black pb-20 px-20">
       <div className="relative flex justify-center h-screen">
@@ -35,9 +44,18 @@ export const ShopSection = () => {
       </div>
 
       <div className="pt-20">
-        <h2 className="font-bold text-6xl text-white text-end pb-20">
-          WHATS INCLUDED
-        </h2>
+        <div className="flex flex-col items-end pb-20">
+          <h2 className="font-bold text-6xl  text-white text-end pb-2">
+            WHATS INCLUDED
+          </h2>
+          <button
+            onClick={() => console.log(Object.values(products))}
+            className="bg-red text-3xl"
+          >
+            CLICK ME SHOW CONSOLE
+          </button>
+          <div className="h-2 w-72 rounded-full bg-gradient-to-r from-[#ca6eff] to-[#6e8bef]" />
+        </div>
         <div className="h-2 w-full bg-pink" />
         <div className="flex flex-wrap px-20 justify-center gap-8 pb-20">
           <CardProduct {...principal[0]}>
@@ -56,8 +74,12 @@ export const ShopSection = () => {
       </div>
 
       <div>
-        <h2 className="font-bold text-6xl text-white text-start">ACCESORIES</h2>
-        <div className="h-3 w-40 rounded-full bg-gradient-to-r mt-3  from-[#ca6eff] to-[#6e8bef]" />
+        <div>
+          <h2 className="font-bold text-6xl text-white text-start">
+            ACCESSORIES
+          </h2>
+          <div className="h-2 w-52 rounded-full bg-gradient-to-r mt-3  from-[#ca6eff] to-[#6e8bef]" />
+        </div>
         <div className="flex flex-wrap gap-4 justify-center pt-20">
           <CardAccesorie {...accesories[0]}>
             <Image src={accesories[0].img} width={300} height={60} />

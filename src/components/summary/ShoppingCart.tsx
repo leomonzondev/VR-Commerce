@@ -2,7 +2,11 @@ import React, { useEffect } from "react";
 import { SummaryProduct } from "./SummaryProduct";
 import { IoIosArrowDown } from "react-icons/io";
 
-export const ShoppingCart = ({ handleShowCart }) => {
+type summaryProps = {
+  handleShowCart: () => void;
+};
+
+export const ShoppingCart = ({ handleShowCart }: summaryProps) => {
   return (
     <div className="w-[50rem] h-full bg-black border text-white px-10 py-5">
       <p
@@ -11,8 +15,8 @@ export const ShoppingCart = ({ handleShowCart }) => {
       >
         CLOSE
       </p>
-      <div>
-        <h1 className="uppercase font-bold text-6xl pb-10">Order summary</h1>
+      <h1 className="uppercase font-bold text-6xl pb-10">Order summary</h1>
+      <div className="overflow-y-auto h-[60vh]">
         <SummaryProduct />
         <SummaryProduct />
       </div>

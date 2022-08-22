@@ -1,7 +1,10 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 import logo from "../assets/images/auriculares.png";
+import { addToCart } from "../context/cartSlice";
+import { useAppDispatch } from "../context/hooks";
 type AccesorieProps = {
+  id: string;
   title: string;
   description: string;
   price: number;
@@ -10,12 +13,15 @@ type AccesorieProps = {
 };
 
 export const CardAccesorie = ({
+  id = "123",
   title = "titulo",
   description = "description",
   price = 44,
   img = logo,
   children,
 }: AccesorieProps) => {
+  const dispatch = useAppDispatch();
+
   return (
     <section className="w-[20rem] h-[35rem]  py-6 px-7 justify-between flex flex-col bg-purple-500 bg-gradient-to-b from-[#6e8bef] to-[#ca6eff] rounded-2xl ">
       <article className=" w-full h-[40rem] relative flex justify-center items-center ">
@@ -26,7 +32,10 @@ export const CardAccesorie = ({
         <p className="font-medium text-lg">{description}</p>
         <div className=" flex justify-between items-center ">
           <h2 className="text-xl font-bold text-white">${price} USD</h2>
-          <button className="text-sm font-medium bg-white rounded-full px-8 text-[#567feb] hover:text-[#7399fa] py-2">
+          <button
+            onClick={() => dispatch(addToCart(id))}
+            className="text-sm font-medium bg-white rounded-full px-8 text-[#567feb] hover:text-[#7399fa] py-2"
+          >
             Buy Now
           </button>
         </div>
